@@ -1,0 +1,40 @@
+img {
+    width: 250px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: row;  
+}
+.card-movie {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: lighter;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  max-width: 250px;
+  margin: -5px 1px 0px 1px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.no-movies {
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  display: grid;
+  font-weight: lighter;
+}
+
+.no-movies i {
+  font-size: 5em;
+}
+.no-movies span {
+  font-size: 20px;
+}

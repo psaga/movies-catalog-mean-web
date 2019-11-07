@@ -1,0 +1,18 @@
+.icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.search-full-width {
+    width: 100%;
+}
+.name-section-back {
+  left: -15px;
+  position: relative;
+}
+.btn-back {
+  left: -15px;
+}

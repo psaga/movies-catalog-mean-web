@@ -1,0 +1,25 @@
+<div class="align-center" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="container" 
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      *ngIf="!loading && movies.length > 0">
+    <span class="card-movie" *ngFor="let movie of movies" [routerLink]="['/movie-detail', movie._id]">
+      <img [src]="movie.poster || defaultImg" (error)="setDefaultImg(movie)" alt="">
+      <div class="title">{{ movie.title }}</div>
+    </span>
+</div>
+<div *ngIf="!loading && movies.length === 0" class="align-center">
+  <div class="no-movies">
+    <i class="material-icons">
+      local_movies
+    </i>
+    <span>
+      No movies found.
+    </span>
+  </div>
+</div>

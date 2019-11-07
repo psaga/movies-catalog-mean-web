@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button class="btn-back" *ngIf="backAvailable" [routerLink]="['/']" >
+            <mat-icon class="icon" aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+        </button>
+        <span [ngClass]="{'name-section-back': backAvailable}" *ngIf="!searchMode">{{ route }}</span>
+        <mat-form-field *ngIf="searchMode" class="search-full-width">
+            <input id="inputSearch" matInput value="" [ngModel]="term" #searchInput (input)="search(searchInput.value)">
+        </mat-form-field>
+        <span class="spacer"></span>
+        <button mat-button (click)="toggleSearch()" *ngIf="!backAvailable">
+            <mat-icon class="icon" aria-hidden="false" aria-label="Search">{{ searchMode? 'close' : 'search'}}</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
